@@ -1,0 +1,40 @@
+﻿.footer {
+    position: absolute;
+    background-color: #CDA98B;
+    width: 100%;
+    height: 5vh;
+    left: 0;
+    bottom: 0;
+    display: inline-flex;
+}
+
+.footer .imageCallingFooter{
+    margin: 5px 0 0 10vw;
+    height: 40px;
+    width: 40px;
+}
+
+.footer .imageInstagramFooter{
+    margin: 4px 0 0 20vw;
+    height: 40px;
+    width: 40px;
+}
+
+.footer .logoFooter{
+    margin: 4px 0 0 25vw;
+    height: 40px;
+    width: 140px;
+}
+
+.footer .textFooter{
+    margin: 3px 0 0 15px;
+    margin-block-start: 7px;
+    font-size: 26px;
+    font-weight: bold;
+}
+.marginTopFooter{
+    margin-top: 3px;
+}
+
+
+

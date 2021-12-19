@@ -1,0 +1,40 @@
+﻿.Details {
+    overflow-y: scroll;
+    width: 89vw;
+    height: 85vh;
+/*    flex-wrap:nowrap;
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;*/
+}
+
+.Image {
+    width: 230px;
+    height: 270px;
+    margin: 25px 15px 25px 15px;
+}
+
+.Gallery {
+    margin-top: 5vw;
+    margin-left: 4vw;
+    margin-bottom: 4vw;
+    width: 40vw;
+    height: 85vh;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: flex-start;
+    display: flex;
+}
+
+.Info {
+    margin-top: 9vh;
+    margin-left: 25vw;
+}
+
+.Title{
+    margin-left: 15vw;
+}
+
+.Descryption {
+    font-size: 22px;
+}

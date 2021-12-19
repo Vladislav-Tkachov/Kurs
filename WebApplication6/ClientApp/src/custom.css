@@ -1,0 +1,53 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.MainPage {
+    overflow-y: scroll;
+    width: 90vw;
+    height: 85vh;
+    font-size: 22px;
+}
+
+.MainImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35vh;
+    width: 35vw;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.MainImage2 {
+    float: left;
+    height: 25vh;
+    width: 10vw;
+    margin: 4px 15px 10px 45px;
+}
+
+.Text1 {
+    margin-left: 45px;
+    margin-bottom: 0;
+}
+
+.Text2 {
+    margin-left: 45px;
+}
+
+.MainText1 {
+    margin-bottom: 15px;
+}
+
+
