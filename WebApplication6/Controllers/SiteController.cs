@@ -2,6 +2,7 @@
 using Kurs.DAL;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 namespace WebApplication6.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     public class SiteController : ControllerBase
     {
         private readonly ILogger<SiteController> _logger;
@@ -22,20 +23,24 @@ namespace WebApplication6.Controllers
             _siteService = siteService;
         }
 
-        [HttpGet]
-        [Route("SIte/GetCard/{id?}")]
-        public async Task<CardDTO> GetCard(Guid id)
+        [HttpPost]
+        public async Task<CardDTO> GetCard([FromBody] object id)
         {
-            var i = await _siteService.GetCard(id);
+            var state = JsonConvert.DeserializeObject<Guid>(id.ToString());
+            var i = await _siteService.GetCard(state);
             return i;
         }
 
         [HttpPost]
-        public async Task<List<CardDTO>> GetCards(int type)
+        public async Task<List<CardDTO>> GetCards([FromBody] object type)
         {
-            var i = await _siteService.GetCards(type);
+            var state = JsonConvert.DeserializeObject<A>(type.ToString());
+            var i = await _siteService.GetCards(state.type);
             return i;
         }
-
+        public class A
+        {
+            public int type;
+        }
     }
 }

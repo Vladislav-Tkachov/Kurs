@@ -18,11 +18,11 @@ export default () => (
                 <Route exact path='/wardrobes'><Cards type={TypeCard.Wardrobes} /></Route>
                 <Route exact path='/serialfurniture'><Cards type={TypeCard.SerialFurnitures} /></Route>
                 <Route exact path='/officefurniture'><Cards type={TypeCard.OfficeFurnitures} /></Route>
-                <Route exact path="/kitchens/:id" render={(props) => <CardInfo id={props.match.params.id} />} />
-                <Route exact path="/wardrobes/:id" render={(props) => <CardInfo id={props.match.params.id} />} />
-                <Route exact path="/hallways/:id" render={(props) => <CardInfo id={props.match.params.id} />} />
-                <Route exact path="/serialfurniture/:id" render={(props) => <CardInfo id={props.match.params.id} />} />
-                <Route exact path="/officefurniture/:id" render={(props) => <CardInfo id={props.match.params.id} />} />
+                <Route exact path="/Kitchens/:id" render={(props) => <CardInfo id={props.match.params.id} />} />
+                <Route exact path="/Wardrobes/:id" render={(props) => <CardInfo id={props.match.params.id} />} />
+                <Route exact path="/Hallways/:id" render={(props) => <CardInfo id={props.match.params.id} />} />
+                <Route exact path="/SerialFurnitures/:id" render={(props) => <CardInfo id={props.match.params.id} />} />
+                <Route exact path="/OfficeFurnitures/:id" render={(props) => <CardInfo id={props.match.params.id} />} />
             </main>
         </Layout>
     </Router>

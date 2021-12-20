@@ -15,7 +15,7 @@ code {
 
 .MainPage {
     overflow-y: scroll;
-    width: 90vw;
+    /*width: 89.5vw;*/
     height: 85vh;
     font-size: 22px;
 }

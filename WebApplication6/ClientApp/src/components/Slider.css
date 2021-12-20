@@ -1,6 +1,6 @@
 ﻿.container-slider {
     max-width: 700px;
-    height: 600px;
+    height: 780px;
     margin-left: 30vw;
     margin-bottom: 5vh;
     position: relative;
@@ -24,9 +24,9 @@
 }
 
     .slide img {
-        margin-left: 125px;
+        margin-left: 145px;
         width: 400px;
-        height: 500px;
+        height: 700px;
         object-fit: cover;
     }
 

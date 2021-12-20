@@ -39,9 +39,9 @@ type KnownAction = RequestWeatherForecastsAction | ReceiveCardsAction | ReceiveC
 // They don't directly mutate state, but they can have external side-effects (such as loading data).
 
 export const actionCreators = {
-    requestCards: (type: TypeCard): AppThunkAction<KnownAction> => (dispatch, getState) => {
+    requestCards: (type: number): AppThunkAction<KnownAction> => (dispatch, getState) => {
         // Only load data if it's something we don't already have (and are not already loading)
-        axios.post(`api/site`, type as number)
+        axios.post(`api/site/getcards`, {'type': type })
             .then(res => {
                 dispatch({ type: 'RECEIVE_CARDS', cards: res.data });
                 });
@@ -49,10 +49,10 @@ export const actionCreators = {
             dispatch({ type: 'REQUEST_CARDS' });
     },
 
+
     GetCard: (id: string): AppThunkAction<KnownAction> => (dispatch, getState) => {
         // Only load data if it's something we don't already have (and are not already loading)
-        const url = `api/site/getcard/` + id;
-        axios.get(url)
+        axios.post(`api/site/getcard`, id )
             .then(res => {
                 dispatch({ type: 'RECEIVE_CARD', card: res.data });
             });

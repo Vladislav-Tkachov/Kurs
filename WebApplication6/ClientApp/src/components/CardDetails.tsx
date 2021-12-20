@@ -69,7 +69,7 @@ class CardDetails extends React.Component<Props, State>{
 
         if (this.state.dataSlider.length === 0 && card !== undefined) {
             let images = card.images.map(_ => _);
-            this.setState({ slideIndex: 0, dataSlider: images.map(_ => <img src={"../../../Images/" + card.type + "/" + card.id + "/" + _.path} />) });
+            this.setState({ slideIndex: 1, dataSlider: images.map(_ => <img src={"../../../Images/" + card.type + "/" + card.id + "/" + _.path} />) });
         }
         //if (card !== undefined) {
 

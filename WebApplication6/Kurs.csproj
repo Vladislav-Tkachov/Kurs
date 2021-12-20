@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -9,6 +9,7 @@
     <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
     <AssemblyName>Kurs</AssemblyName>
     <RootNamespace>Kurs</RootNamespace>
+	 <AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
   <ItemGroup>
@@ -36,12 +37,13 @@
     <TypeScriptCompile Include="ClientApp\src\Entity.ts" />
   </ItemGroup>
 
+	<!--
   <ItemGroup>
     <Folder Include="Images\1\" />
     <Folder Include="Images\2\" />
     <Folder Include="Images\3\" />
     <Folder Include="Images\4\" />
-  </ItemGroup>
+  </ItemGroup>-->
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
